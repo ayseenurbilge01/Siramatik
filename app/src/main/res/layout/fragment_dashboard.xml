@@ -14,15 +14,14 @@
         android:layout_marginLeft="320dp"
         android:layout_marginTop="10dp"
         android:backgroundTint="#001489"
-        android:textColor="@color/white"
         android:text="ÇIKIŞ"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
 
 
     <TextView
@@ -37,16 +36,15 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.142" />
+        app:layout_constraintVertical_bias="0.188" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/buttonradius"
+        android:layout_height="60dp"
         android:backgroundTint="#001489"
         android:text="SIRA AL"
         android:textColor="#FFFFFF"
@@ -59,21 +57,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.816" />
 
-    <TextView
-        android:id="@+id/txt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:autoSizeMaxTextSize="100sp"
-        android:text="Önümde kaç kişi kaldı?"
-        android:textColor="#3354A6"
-        android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

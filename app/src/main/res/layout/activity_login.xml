@@ -80,12 +80,11 @@
     <Button
         android:id="@+id/btngiris"
         android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="550dp"
-        android:background="@drawable/buttonradius"
         android:backgroundTint="#001489"
-        android:text="GİRİŞ YAP"
+        android:text="SIRA AL"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold" />

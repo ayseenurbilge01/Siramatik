@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
+import org.json.JSONTokener
 import java.util.HashMap
 
 class HomeFragment : Fragment() {
@@ -55,7 +56,6 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val MyActivity = activity as MainActivity
-        editName.text=null
         logout.setOnClickListener {
             MyActivity.logOut()
         }
@@ -65,14 +65,21 @@ class HomeFragment : Fragment() {
                 Method.POST, url,
                 Response.Listener { response ->
                     try {
-                        //editName.hint=response.toString()
-                        Toast.makeText(activity, response.toString(), Toast.LENGTH_LONG).show()
-                        /*val emp = JSONObject(response).getJSONObject("users")
-                        val empName = emp.getString("Ad")
-                        val empSurname = emp.getString("Soyad")
-                        val empDateofBirth = emp.getString("Tarih")
-                        val empEmail = emp.getString("mail")
-                        val string = "$empName"*/
+                        val jsonObject = JSONTokener(response).nextValue() as JSONObject
+
+                        val ad = jsonObject.getString("Ad")
+                        val soyad =jsonObject.getString("Soyad")
+
+                        editName.hint =ad +" "+ soyad
+                        editName.isEnabled=false
+
+                        val tarih = jsonObject.getString("Tarih")
+                        editDateofBirth.hint=tarih
+                        editDateofBirth.isEnabled=false
+
+                        val eposta = jsonObject.getString("mail")
+                        editEmail.hint=eposta
+                        editEmail.isEnabled=false
 
                     }catch (ex: JSONException) {
                     }
